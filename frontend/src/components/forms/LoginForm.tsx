@@ -1,4 +1,5 @@
 import { Button } from "../../components/ui/button";
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -20,17 +21,17 @@ export default function LoginForm() {
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" placeholder="Email" />
+              <Input className="outline-none" id="email" placeholder="Email" />
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" placeholder="Password" />
+              <Input className="outline-none" id="password" placeholder="Password" />
             </div>
           </div>
         </form>
       </CardContent>
       <CardFooter className="flex justify-center gap-5">
-        <Button variant="outline">Signup</Button>
+	      <Link href={'/signup'}> <Button variant="outline">Signup</Button></Link>
         <Button>Login</Button>
       </CardFooter>
     </Card>
